@@ -44,8 +44,8 @@ for t,(fn,cols) in tables_def.items():
         'annotations':[{'name':'PBI_ResultType','value':'Table'}]})
 MEAS={'Dim_Grafico':[('Contador_PT','COUNTROWS(Dim_Grafico) & " de " & CALCULATE(COUNTROWS(Dim_Grafico), ALL(Dim_Grafico)) & " gráficos"'),
   ('Contador_EN','COUNTROWS(Dim_Grafico) & " of " & CALCULATE(COUNTROWS(Dim_Grafico), ALL(Dim_Grafico)) & " charts"')],
- 'Dim_Caso':[('Pergunta_PT','SELECTEDVALUE(Dim_Caso[pergunta_pt], "")'),('Pergunta_EN','SELECTEDVALUE(Dim_Caso[pergunta_en], "")'),
-  ('Dica_PT','VAR d = SELECTEDVALUE(Dim_Caso[dica_pt], "") RETURN IF(d = "", "", "Dica: " & d)'),('Dica_EN','VAR d = SELECTEDVALUE(Dim_Caso[dica_en], "") RETURN IF(d = "", "", "Tip: " & d)')]}
+ 'Dim_Caso':[('Texto_Pergunta_PT','SELECTEDVALUE(Dim_Caso[pergunta_pt], "")'),('Texto_Pergunta_EN','SELECTEDVALUE(Dim_Caso[pergunta_en], "")'),
+  ('Texto_Dica_PT','VAR d = SELECTEDVALUE(Dim_Caso[dica_pt], "") RETURN IF(d = "", "", "Dica: " & d)'),('Texto_Dica_EN','VAR d = SELECTEDVALUE(Dim_Caso[dica_en], "") RETURN IF(d = "", "", "Tip: " & d)')]}
 for tb in tables:
     if tb['name'] in MEAS: tb['measures']=[{'name':n,'expression':e,'lineageTag':g(tb['name']+n)} for n,e in MEAS[tb['name']]]
 rels=[{'name':g('r1'),'fromTable':'Fato_Selecao','fromColumn':'id_grafico','toTable':'Dim_Grafico','toColumn':'id_grafico','crossFilteringBehavior':'bothDirections'},
@@ -171,8 +171,8 @@ def credito(L):
     key='cr_'+L; first={'pt':'Aging da carteira','en':'Portfolio aging'}[L]
     vcs=chrome(key,L)
     vcs.append(slicer(hx(f'cs{L}'),'Dim_Caso',f'titulo_{L}',{'pt':'Caso de uso','en':'Use case'}[L],24,98,290,580,1000,'Basic',{'pt':'Casos de uso de crédito e cobrança','en':'Credit and collections use cases'}[L],horizontal=False,single=True,default=first))
-    vcs.append(card(hx(f'q{L}'),'Pergunta_'+L.upper(),356,66,900,92,100,24,'#211A2B',{'pt':'Pergunta do caso','en':'Case question'}[L],True,'Dim_Caso'))
-    vcs.append(card(hx(f'd{L}'),'Dica_'+L.upper(),356,160,900,36,101,14,'#4A4158',{'pt':'Dica de leitura','en':'Reading tip'}[L],False,'Dim_Caso'))
+    vcs.append(card(hx(f'q{L}'),'Texto_Pergunta_'+L.upper(),356,66,900,92,100,24,'#211A2B',{'pt':'Pergunta do caso','en':'Case question'}[L],True,'Dim_Caso'))
+    vcs.append(card(hx(f'd{L}'),'Texto_Dica_'+L.upper(),356,160,900,36,101,14,'#4A4158',{'pt':'Dica de leitura','en':'Reading tip'}[L],False,'Dim_Caso'))
     vcs.append(cardbrowser(L,hx(f'cbc{L}'),{'pt':'Gráficos indicados para o caso','en':'Charts suggested for the case'}[L],340,230,916,446))
     return vcs
 def sobre():
