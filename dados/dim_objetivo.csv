@@ -1,0 +1,12 @@
+id_objetivo,nome_pt,nome_en,descricao_pt,descricao_en,ordem
+1,Desvio,Deviation,"Destaca variações acima e abaixo de uma referência, como zero ou uma meta.","Highlights variation above and below a reference, such as zero or a target.",1
+2,Relacionamento,Relationship,Mostra como duas ou mais variáveis se relacionam entre si.,Shows how two or more variables relate to each other.,2
+3,Ranking,Ranking,Use quando a posição na lista importa mais que o valor.,Use when the position in the list matters more than the value.,3
+4,Distribuição,Distribution,Mostra como os valores se espalham e com que frequência aparecem.,Shows how values spread out and how often they occur.,4
+5,Comparação (Tempo),Comparison (Time),Enfatiza tendências e mudanças ao longo de um período.,Emphasizes trends and change across a period.,5
+6,Comparação (Tamanho),Comparison (Size),"Compara magnitudes entre categorias, de forma relativa ou exata.","Compares magnitudes across categories, loosely or exactly.",6
+7,Composição,Composition,Mostra como um total se divide em partes.,Shows how a total breaks down into parts.,7
+8,Composição (Tempo),Composition (Time),Mostra como a divisão de um total muda ao longo do tempo.,Shows how the breakdown of a total changes over time.,8
+9,Espacial,Spatial,Mostra padrões nos dados sobre um mapa.,Shows data patterns on a map.,9
+10,Fluxo,Flow,"Mostra movimentos, etapas e relações dinâmicas.","Shows movement, steps and dynamic relations.",10
+11,Valor único,Single value,Destaca um número ou um conjunto exato de valores.,Highlights one number or an exact set of values.,11

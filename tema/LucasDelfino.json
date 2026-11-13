@@ -1,0 +1,66 @@
+{
+  "name": "Lucas Delfino",
+  "dataColors": [
+    "#7139B8",
+    "#B66BEA",
+    "#E7C5FF",
+    "#D7F34A",
+    "#FF665D",
+    "#4A2480",
+    "#9A55D6",
+    "#C9A0F0"
+  ],
+  "background": "#FAF7FE",
+  "foreground": "#211A2B",
+  "tableAccent": "#B66BEA",
+  "good": "#D7F34A",
+  "bad": "#FF665D",
+  "neutral": "#E7C5FF",
+  "maximum": "#7139B8",
+  "center": "#E7C5FF",
+  "minimum": "#F4ECFC",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#170E27",
+      "fontSize": 14
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#5E516F",
+      "fontSize": 11
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#7139B8",
+      "fontSize": 28
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#EBDDF8"
+              }
+            },
+            "radius": 12
+          }
+        ]
+      }
+    }
+  }
+}
