@@ -7,8 +7,8 @@ Guia interativo, em português e inglês, para escolher o gráfico certo no Powe
 | Pasta / Folder | O que tem / What it has |
 |---|---|
 | `dist/Guia_Visualizacao_Lucas_Delfino.pbit` | Modelo do Power BI (template). / Power BI template. |
-| `dados/` | 3 tabelas em CSV: `dim_grafico` (61 gráficos), `dim_objetivo` (11 objetivos), `fato_selecao` (critérios de escolha). / 3 CSV tables. |
-| `imagens/graficos/` | 61 ilustrações PNG usadas nos cartões (links públicos). / 61 PNG illustrations used on the cards. |
+| `dados/` | 3 tabelas em CSV: `dim_grafico` (59 gráficos), `dim_objetivo` (11 objetivos), `fato_selecao` (critérios de escolha). / 3 CSV tables. |
+| `imagens/graficos/` | 59 ilustrações PNG usadas nos cartões (links públicos). / 59 PNG illustrations used on the cards. |
 | `imagens/fundos/` | Fundos das 3 páginas do relatório. / Page backgrounds. |
 | `tema/LucasDelfino.json` | Tema do Power BI (opcional). / Optional Power BI theme. |
 

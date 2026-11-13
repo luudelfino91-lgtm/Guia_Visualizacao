@@ -1,0 +1,150 @@
+[
+ {
+  "t_pt": "Aging da carteira",
+  "t_en": "Portfolio aging",
+  "q_pt": "Quanto da carteira está em cada faixa de atraso?",
+  "q_en": "How much of the portfolio sits in each delinquency bucket?",
+  "charts": [
+   "colunas_empilhadas",
+   "barras_100",
+   "colunas"
+  ],
+  "n_pt": "Ordene as faixas do menor para o maior atraso.",
+  "n_en": "Order the buckets from least to most overdue."
+ },
+ {
+  "t_pt": "Roll rate entre faixas",
+  "t_en": "Roll rate between buckets",
+  "q_pt": "Quanto migra de uma faixa de atraso para a seguinte?",
+  "q_en": "How much moves from one delinquency bucket to the next?",
+  "charts": [
+   "calor_xy",
+   "sankey"
+  ],
+  "n_pt": "Matriz origem × destino com escala de cor sequencial.",
+  "n_en": "Origin × destination matrix with a sequential color scale."
+ },
+ {
+  "t_pt": "Curvas de safra (vintage)",
+  "t_en": "Vintage curves",
+  "q_pt": "Como cada safra de concessão se comporta mês a mês?",
+  "q_en": "How does each origination cohort behave month by month?",
+  "charts": [
+   "multilinhas",
+   "linha"
+  ],
+  "n_pt": "Até 5 safras; destaque a mais recente.",
+  "n_en": "Up to 5 cohorts; highlight the most recent."
+ },
+ {
+  "t_pt": "Funil de cobrança",
+  "t_en": "Collections funnel",
+  "q_pt": "Quantos acionados viram promessa e pagamento?",
+  "q_en": "How many contacted accounts become a promise and a payment?",
+  "charts": [
+   "funil",
+   "barras"
+  ],
+  "n_pt": "Rotule a taxa de conversão entre as etapas.",
+  "n_en": "Label the conversion rate between steps."
+ },
+ {
+  "t_pt": "Inadimplência por região",
+  "t_en": "Delinquency by region",
+  "q_pt": "Onde a inadimplência é maior?",
+  "q_en": "Where is delinquency highest?",
+  "charts": [
+   "coropletico",
+   "mapa_bolhas",
+   "barras"
+  ],
+  "n_pt": "Taxa em mapa coroplético; total em bolhas.",
+  "n_en": "Rates on a choropleth; totals as bubbles."
+ },
+ {
+  "t_pt": "Meta de recuperação",
+  "t_en": "Recovery target",
+  "q_pt": "Estamos acima ou abaixo da meta de recuperação?",
+  "q_en": "Are we above or below the recovery target?",
+  "charts": [
+   "bullet",
+   "linha_coluna",
+   "cartao"
+  ],
+  "n_pt": "Mostre sempre a meta junto do realizado.",
+  "n_en": "Always show the target next to the actual."
+ },
+ {
+  "t_pt": "Movimento do saldo",
+  "t_en": "Balance movement",
+  "q_pt": "O que explica a variação do saldo da carteira?",
+  "q_en": "What explains the change in the portfolio balance?",
+  "charts": [
+   "cascata"
+  ],
+  "n_pt": "Saldo inicial, concessões, recebimentos, baixas e saldo final.",
+  "n_en": "Opening balance, originations, collections, write-offs and closing balance."
+ },
+ {
+  "t_pt": "Distribuição de atraso ou score",
+  "t_en": "Delinquency or score distribution",
+  "q_pt": "Como os clientes se distribuem por dias de atraso ou score?",
+  "q_en": "How are customers distributed by days past due or score?",
+  "charts": [
+   "histograma",
+   "boxplot",
+   "violino"
+  ],
+  "n_pt": "Teste mais de uma largura de faixa.",
+  "n_en": "Try more than one bin width."
+ },
+ {
+  "t_pt": "Canais de cobrança",
+  "t_en": "Collection channels",
+  "q_pt": "Qual canal traz melhor resultado ao longo do tempo?",
+  "q_en": "Which channel performs best over time?",
+  "charts": [
+   "multilinhas",
+   "colunas",
+   "faixas"
+  ],
+  "n_pt": "Compare poucos canais por vez.",
+  "n_en": "Compare few channels at a time."
+ },
+ {
+  "t_pt": "Mix da carteira",
+  "t_en": "Portfolio mix",
+  "q_pt": "Como a carteira se divide por produto ou segmento?",
+  "q_en": "How is the portfolio split by product or segment?",
+  "charts": [
+   "treemap",
+   "barras"
+  ],
+  "n_pt": "Prefira barras quando os valores forem próximos.",
+  "n_en": "Prefer bars when values are close."
+ },
+ {
+  "t_pt": "Indicador-chave do dia",
+  "t_en": "Key indicator of the day",
+  "q_pt": "Qual número precisa aparecer primeiro?",
+  "q_en": "Which number must show up first?",
+  "charts": [
+   "cartao",
+   "bullet"
+  ],
+  "n_pt": "Acompanhe de uma referência: meta ou período anterior.",
+  "n_en": "Pair it with a reference: target or prior period."
+ },
+ {
+  "t_pt": "Ranking de carteiras e equipes",
+  "t_en": "Portfolio and team ranking",
+  "q_pt": "Quais carteiras ou equipes lideram?",
+  "q_en": "Which portfolios or teams lead?",
+  "charts": [
+   "barras",
+   "pirulito"
+  ],
+  "n_pt": "Ordene pelo valor.",
+  "n_en": "Sort by value."
+ }
+]
