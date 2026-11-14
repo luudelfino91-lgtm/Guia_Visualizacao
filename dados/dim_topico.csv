@@ -1,0 +1,9 @@
+id_topico,ordem,slug,titulo_pt,titulo_en,ideia_pt,ideia_en
+1,1,contexto,Entenda o contexto,Understand the context,"Antes de abrir o Power BI, defina quem vai ver, o que precisa decidir e como vai receber o dado.","Before opening Power BI, define who will see it, what they must decide and how they will receive the data."
+2,2,escolher,Escolha o gráfico certo,Pick the right chart,"O gráfico é a resposta a uma pergunta, não um enfeite.","A chart is the answer to a question, not decoration."
+3,3,ruido,Elimine o ruído,Remove the clutter,Tudo o que não ajuda a entender atrapalha.,Whatever does not help understanding gets in the way.
+4,4,olhar,Direcione o olhar,Direct the eye,"Cor, tamanho e posição dizem onde olhar primeiro.","Color, size and position say where to look first."
+5,5,designer,Pense como designer,Think like a designer,"Alinhamento, espaço em branco e hierarquia fazem o relatório parecer profissional.","Alignment, white space and hierarchy make a report look professional."
+6,6,historia,Conte uma história,Tell a story,"Uma boa história tem começo, virada e ação.","A good story has a beginning, a turn and an action."
+7,7,titulo,Escreva títulos que concluem,Write titles that conclude,O título deve dizer o que o dado mostra.,The title should say what the data shows.
+8,8,rotulos,Rotule direto no gráfico,Label directly on the chart,"Quanto menos o olho viaja, mais rápido a mensagem chega.","The less the eye travels, the faster the message arrives."

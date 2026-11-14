@@ -7,7 +7,7 @@ Guia interativo, em português e inglês, para escolher o gráfico certo no Powe
 | Pasta / Folder | O que tem / What it has |
 |---|---|
 | `dist/Guia_Visualizacao_Lucas_Delfino.pbit` | Modelo do Power BI (template). / Power BI template. |
-| `dados/` | 5 tabelas em CSV: `dim_grafico` (59 gráficos), `dim_objetivo`, `fato_selecao`, `dim_caso` (12 casos), `ponte_caso_grafico`. / 3 CSV tables. |
+| `dados/` | 8 tabelas em CSV: `dim_grafico` (59 gráficos), `dim_objetivo`, `fato_selecao`, `dim_caso` (12 casos), `ponte_caso_grafico`, `dim_topico`, `dim_passo`, `dim_exemplo` (aba Storytelling, 8 tópicos). / 8 CSV tables. |
 | `imagens/graficos/` | 59 ilustrações PNG usadas nos cartões (links públicos). / 59 PNG illustrations used on the cards. |
 | `imagens/fundos/` | Fundos das 3 páginas do relatório. / Page backgrounds. |
 | `tema/LucasDelfino.json` | Tema do Power BI (opcional). / Optional Power BI theme. |
@@ -25,3 +25,10 @@ Célula vazia no original significa "tanto faz": cada linha foi expandida para t
 
 ## Créditos e licença / Credits
 Textos e ilustrações originais de **Lucas Delfino**, sob **CC BY 4.0** (veja `LICENSE.md`): cite o autor ao reutilizar. Taxonomia inspirada em guias abertos (Financial Times Visual Vocabulary, Data to Viz, Data Viz Project, Data Viz Catalogue); nenhum texto ou imagem deles foi copiado. O visual **Card Browser** é da Microsoft (MIT). / Original texts and illustrations by **Lucas Delfino**, under **CC BY 4.0** (see `LICENSE.md`): please credit the author. Taxonomy inspired by open guides; none of their text or images were copied. The Card Browser visual is by Microsoft (MIT).
+
+
+## Storytelling e links / Storytelling and links
+
+A aba **Storytelling** traz 8 tópicos com explicação curta, passos e exemplos antes/depois, todos originais, inspirados nas lições do livro *Storytelling with Data* (Cole Nussbaumer Knaflic). Portfólio: https://luudelfino91-lgtm.github.io/portfolio/
+
+The **Storytelling** tab has 8 topics with a short explanation, steps and original before/after examples, inspired by the lessons of *Storytelling with Data* (Cole Nussbaumer Knaflic).

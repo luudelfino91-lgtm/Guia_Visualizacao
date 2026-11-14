@@ -1,0 +1,25 @@
+id_passo,id_topico,ordem,texto_pt,texto_en
+11,1,1,1. Escreva em uma frase quem é o público e que decisão ele toma.,1. Write in one sentence who the audience is and what decision they make.
+12,1,2,2. Defina a ideia principal: o que a pessoa deve lembrar se esquecer o resto?,2. Define the big idea: what should they remember if they forget everything else?
+13,1,3,3. Escolha o formato: relatório para explorar ou apresentação para explicar.,3. Pick the format: a report to explore or a presentation to explain.
+21,2,1,"1. Comece pela pergunta: comparar, acompanhar no tempo, mostrar partes ou relacionar?","1. Start with the question: compare, track over time, show parts or relate?"
+22,2,2,2. Prefira barras e linhas: o olho mede comprimento e posição melhor que ângulo.,2. Prefer bars and lines: the eye reads length and position better than angle.
+23,2,3,3. Use a aba Guia deste projeto para filtrar as opções.,3. Use this project's Guide tab to filter the options.
+31,3,1,"1. Remova bordas, grades pesadas e legendas repetidas.","1. Remove borders, heavy gridlines and repeated legends."
+32,3,2,2. Mostre só os rótulos que importam.,2. Show only the labels that matter.
+33,3,3,"3. Teste: tire o elemento. Se ninguém sentir falta, ele sai.","3. Test it: remove the element. If nobody misses it, it stays out."
+41,4,1,1. Deixe tudo em lavanda ou cinza claro e destaque um elemento com a cor de ação.,1. Keep everything light lavender or gray and highlight one element with the action color.
+42,4,2,2. Use no máximo uma cor de destaque por gráfico.,2. Use at most one highlight color per chart.
+43,4,3,"3. Ponha o mais importante no alto, à esquerda.",3. Put the most important thing at the top left.
+51,5,1,1. Alinhe tudo a uma grade e mantenha margens iguais.,1. Align everything to a grid and keep margins equal.
+52,5,2,"2. Use dois ou três tamanhos de texto, não dez.","2. Use two or three text sizes, not ten."
+53,5,3,3. Deixe espaço em branco: ele separa e descansa.,3. Leave white space: it separates and rests the eye.
+61,6,1,1. Contexto: onde estamos?,1. Context: where are we?
+62,6,2,2. Virada: o que mudou ou o que descobrimos?,2. Turn: what changed or what did we find?
+63,6,3,3. Ação: o que queremos que seja feito?,3. Action: what do we want done?
+71,7,1,"1. Troque ""Vendas por mês"" por uma frase com o resultado e o número.","1. Swap ""Sales by month"" for a sentence with the result and the number."
+72,7,2,"2. Coloque o título à esquerda, no alto.",2. Place the title at the top left.
+73,7,3,3. Use o subtítulo para período e unidade.,3. Use the subtitle for period and unit.
+81,8,1,1. Escreva o nome da série no fim da linha.,1. Write the series name at the end of the line.
+82,8,2,2. Tire a legenda quando houver até cinco séries.,2. Drop the legend when there are up to five series.
+83,8,3,3. Mantenha a mesma cor entre rótulo e série.,3. Keep the same color for label and series.

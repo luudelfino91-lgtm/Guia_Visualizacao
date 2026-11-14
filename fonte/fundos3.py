@@ -36,22 +36,29 @@ h1 mark{background:linear-gradient(transparent 58%,#D7F34A 58% 92%,transparent 9
 '''
 def header(cur,lang):
     L=lambda k,t,c=False:f'<div class="a nv{" cur" if c else ""}" style="left:{NAV[k][0]}px;width:{NAV[k][1]}px"><i>{t}</i></div>'
-    names={'pt':('Guia','Crédito e cobrança','Sobre o autor'),'en':('Guide','Credit & collections','About the author')}[lang]
+    names={'pt':('Guia','Storytelling','Crédito e cobrança','Sobre o autor'),'en':('Guide','Storytelling','Credit & collections','About the author')}[lang]
     return (f'<div class="a hd"></div><div class="a brand">Lucas Delfino<small>DATA &amp; BI ANALYST</small></div>'
-      +L('guia',names[0],cur=='guia')+L('cred',names[1],cur=='cred')+L('sobre',names[2],cur=='sobre')+L('li','LinkedIn ↗')
+      +L('guia',names[0],cur=='guia')+L('st',names[1],cur=='st')+L('cred',names[2],cur=='cred')+L('sobre',names[3],cur=='sobre')+L('port',{'pt':'Portfólio ↗','en':'Portfolio ↗'}[lang])+L('li','LinkedIn ↗')
       +f'<div class="a lg{" on" if lang=="pt" else ""}" style="left:{LANG["pt"][0]-2}px">PT</div><div class="a lg{" on" if lang=="en" else ""}" style="left:{LANG["en"][0]+2}px">EN</div>'
       +f'<div class="a me" style="background-image:url(data:image/jpeg;base64,{AV})"></div>')
 FOOT='<div class="a foot">© Lucas Delfino · CC BY 4.0 · github.com/luudelfino91-lgtm/Guia_Visualizacao</div>'
 def guia(lang):
     pt=lang=='pt'
     T={'pt':['Objetivo','Variáveis','Análise temporal?','Categorias','Valores','Composição'],'en':['Goal','Variables','Time analysis?','Categories','Values','Composition']}[lang]
-    title='Qual <mark>gráfico</mark> usar?' if pt else 'Which <mark>chart</mark> should I use?'
-    sub='Responda só ao que souber. Os gráficos que não servem saem da tela.' if pt else 'Answer only what you know. Charts that do not fit leave the screen.'
-    labs=''.join(f'<div class="a lab" style="left:{COLS[i]}px;top:180px"><i>0{i+1}</i>{T[i]}</div>' for i in range(6))
-    return (header('guia',lang)+f'<h1 class="a">{title}</h1><div class="a sub">{sub}</div>'
-      +f'<div class="a btn" style="left:1126px;top:66px;width:106px;height:34px">{"Limpar filtros" if pt else "Clear filters"}</div>'
-      +f'<div class="a lab" style="left:880px;top:123px">{"Mostrar" if pt else "Show"}</div>'
-      +'<div class="a line" style="top:170px"></div>'+labs+'<div class="a line" style="top:262px"></div>'+FOOT)
+    title='Qual <mark>gráfico</mark> usar?' if pt else 'Which <mark>chart</mark> to use?'
+    labs=''.join(f'<div class="a lab" style="left:{COLS[i]}px;top:107px"><i>0{i+1}</i>{T[i]}</div>' for i in range(6))
+    return (header('guia',lang)+f'<h1 class="a" style="font-size:26px;top:62px">{title}</h1>'
+      +f'<div class="a btn" style="left:1126px;top:64px;width:106px;height:32px;font-size:13px">{"Limpar filtros" if pt else "Clear filters"}</div>'
+      +f'<div class="a lab" style="left:470px;top:76px">{"Mostrar" if pt else "Show"}</div>'
+      +'<div class="a line" style="top:100px"></div>'+labs+'<div class="a line" style="top:160px"></div>'+FOOT)
+def storytelling(lang):
+    pt=lang=='pt'
+    note='Inspirado nas lições do livro <b>Storytelling with Data</b>, de Cole Nussbaumer Knaflic. Textos e exemplos são originais.' if pt else 'Inspired by the lessons of <b>Storytelling with Data</b> by Cole Nussbaumer Knaflic. Texts and examples are original.'
+    return (header('st',lang)+f'<div class="a lab" style="left:24px;top:74px">{"Tópicos" if pt else "Topics"}</div>'
+      +'<div class="a" style="left:330px;top:74px;width:1px;height:610px;background:#E3DAEE"></div>'
+      +f'<div class="a lab" style="left:340px;top:170px">{"Como aplicar" if pt else "How to apply"}</div>'
+      +f'<div class="a lab" style="left:340px;top:310px">{"Exemplos" if pt else "Examples"}</div>'
+      +f'<div class="a" style="left:24px;top:470px;width:280px;font-size:12px;line-height:1.5;color:#5F5670">{note}</div>'+FOOT)
 def credito(lang):
     pt=lang=='pt'
     return (header('cred',lang)+f'<div class="a lab" style="left:24px;top:74px">{"Casos de uso" if pt else "Use cases"}</div>'
@@ -68,11 +75,12 @@ def sobre():
     return (header('sobre','pt')+'<div class="a" style="left:24px;top:80px;width:200px;height:200px;border-radius:50%%;background:url(data:image/jpeg;base64,%s) center/cover"></div>'%AV
       +'<div class="a" style="left:24px;top:296px;font:800 34px/1.05 Brico,sans-serif;letter-spacing:-.6px">Lucas Delfino</div><div class="a" style="left:24px;top:338px;color:#5F5670">Data &amp; BI Analyst</div>'
       +'<div class="a" style="left:24px;top:376px;width:250px;height:38px;background:#7139B8;color:#fff;border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:600">Conectar · Connect on LinkedIn ↗</div>'
+      +'<div class="a" style="left:24px;top:422px;width:250px;height:38px;border:1px solid #211A2B;color:#211A2B;border-radius:3px;display:flex;align-items:center;justify-content:center;font-weight:600">Portfólio · Portfolio ↗</div>'
       +'<div class="a" style="left:310px;top:80px;width:1px;height:590px;background:#E3DAEE"></div>'+pt+en+FOOT)
 async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(); pg=await b.new_page(viewport={'width':1280,'height':720},device_scale_factor=1.5)
-        for name,body in [('fundo_guia_pt',guia('pt')),('fundo_guide_en',guia('en')),('fundo_credito_pt',credito('pt')),('fundo_credit_en',credito('en')),('fundo_sobre',sobre())]:
+        for name,body in [('fundo_guia_pt',guia('pt')),('fundo_guide_en',guia('en')),('fundo_credito_pt',credito('pt')),('fundo_st_pt',storytelling('pt')),('fundo_st_en',storytelling('en')),('fundo_credit_en',credito('en')),('fundo_sobre',sobre())]:
             await pg.set_content(f'<html><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}</body></html>')
             await pg.wait_for_timeout(500)
             await pg.screenshot(path=f'repo/imagens/fundos/{name}.png')

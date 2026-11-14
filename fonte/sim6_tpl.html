@@ -27,24 +27,24 @@ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 "Segoe UI",sys
 .hd .lang{display:flex;gap:2px;font-size:12px}.hd .lang button{background:none;border:0;color:#CFC2E6;padding:4px 7px;cursor:pointer;font:inherit}
 .hd .lang button[aria-pressed=true]{color:var(--pd);background:#fff;border-radius:2px;font-weight:700}
 .hd img.me{width:38px;height:38px;border-radius:50%;object-fit:cover;display:block}
-.tt{position:absolute;left:24px;top:64px;font:800 30px/1 "Bricolage Grotesque","Segoe UI",sans-serif;letter-spacing:-.02em}
+.tt{position:absolute;left:24px;top:62px;font:800 26px/1 "Bricolage Grotesque","Segoe UI",sans-serif;letter-spacing:-.02em}
 .tt mark{background:linear-gradient(transparent 58%,var(--lime) 58% 92%,transparent 92%);color:inherit;padding:0 2px}
-.st{position:absolute;left:24px;top:100px;color:#5F5670;font-size:14px}
-.ct{position:absolute;right:24px;top:68px;display:flex;align-items:center;gap:16px}
+.st{display:none}
+.ct{position:absolute;right:24px;top:62px;display:flex;align-items:center;gap:16px}
 .ct .cnt{font-size:14px;color:#5F5670}.ct .cnt strong{font:800 26px "Bricolage Grotesque","Segoe UI",sans-serif;color:var(--p);margin-right:4px}
 .ct button{border:1px solid var(--ink);background:none;color:var(--ink);font-size:14px;padding:7px 14px;border-radius:3px;font:inherit;cursor:pointer}
 .ct button:hover{background:var(--ink);color:#fff}
-.sl{position:absolute;left:24px;right:24px;top:172px;height:86px;display:grid;grid-template-columns:200px repeat(5,1fr);column-gap:22px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:9px 0}
-.sl h2{margin:0 0 6px;font:700 11px "Segoe UI";letter-spacing:.12em;text-transform:uppercase;color:#6A6277}.sl h2 i{font-style:normal;color:var(--p);margin-right:6px}
+.sl{position:absolute;left:24px;right:24px;top:100px;height:62px;display:grid;grid-template-columns:repeat(6,1fr);column-gap:16px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:6px 0}
+.sl h2{margin:0 0 4px;font:700 11px "Segoe UI";letter-spacing:.12em;text-transform:uppercase;color:#6A6277}.sl h2 i{font-style:normal;color:var(--p);margin-right:6px}
 .sl select{width:100%;height:36px;font-size:14px;border:1px solid #C9BDDA;background:#fff;border-radius:3px;padding:0 8px;font:inherit;color:var(--ink)}
 .sl .o{display:flex;gap:4px}.sl .o button{flex:1;height:36px;border:1px solid #C9BDDA;background:#fff;color:var(--ink);border-radius:3px;font:inherit;font-size:14px;cursor:pointer;padding:0 4px;white-space:nowrap}
 .sl .o button:hover{background:var(--soft)}.sl .o button[aria-pressed=true]{background:var(--p);border-color:var(--p);color:#fff}
-.gal{position:absolute;left:24px;right:24px;top:270px;bottom:44px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#C9BDDA transparent;padding-right:6px}
-.g4,.g3{align-items:start}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gal{position:absolute;left:24px;right:24px;top:170px;bottom:44px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#C9BDDA transparent;padding-right:6px}
+.g4,.g3,.g6,.g2{align-items:start}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.g6{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .cd{background:#fff;border:1px solid var(--hair);border-radius:3px;cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:block;width:100%}
 .cd:hover{border-color:var(--p)}
 .cd img{display:block;width:100%;aspect-ratio:8/5;background:#fff;border-bottom:1px solid var(--hair)}
-.cd .ti{background:var(--p);color:#fff;padding:7px 10px;font:600 14px "Segoe UI";min-height:32px;display:flex;align-items:center}
+.cd .ti{background:var(--p);color:#fff;padding:6px 9px;font:600 13px "Segoe UI";min-height:30px;display:flex;align-items:center}
 .cd.f{cursor:pointer}.cd .bk{padding:10px 12px;font-size:13px;line-height:1.4;min-height:184px;border-bottom:1px solid var(--hair)}
 .cd .bk dt{font:700 11px "Segoe UI";letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-top:6px}.cd .bk dt:first-child{margin-top:0}.cd .bk dd{margin:1px 0 0}
 .emp{padding:60px 0;text-align:center;color:#5F5670}.emp b{display:block;font:700 20px "Bricolage Grotesque","Segoe UI",sans-serif;color:var(--ink);margin-bottom:4px}
@@ -104,6 +104,15 @@ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 "Segoe UI",sys
 .phone .ph-g{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 8px 8px}
 .phone .ph-c{border:1px solid #E3DAEE;background:#fff}.phone .ph-c img{width:100%;display:block}.phone .ph-c div{background:#7139B8;color:#fff;padding:3px 5px;font-size:10.5px}
 .pn{flex:1;min-width:260px;max-width:60ch;color:var(--mut)}
+
+.mo{position:absolute;left:470px;top:62px;display:flex;align-items:center;gap:8px}.mo b{font:700 11px "Segoe UI";letter-spacing:.12em;text-transform:uppercase;color:#6A6277}
+.mo .tg{display:flex;border:1px solid var(--ink);border-radius:3px;overflow:hidden}.mo .tg button{border:0;height:32px;background:none;font:inherit;font-size:14px;padding:0 12px;cursor:pointer;color:var(--ink)}.mo .tg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.rd{position:absolute;left:24px;right:24px;top:170px;bottom:44px;background:#fff;border:1px solid var(--hair);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:56px 1fr;z-index:3}
+.rd .rh{grid-column:1/3;background:var(--p);color:#fff;display:flex;align-items:center;padding:0 18px;font:700 20px "Bricolage Grotesque","Segoe UI",sans-serif}.rd .rh button{margin-left:auto;background:none;border:1px solid #fff;color:#fff;border-radius:3px;padding:5px 12px;font:inherit;font-size:14px;cursor:pointer}
+.rd img{width:100%;align-self:center;display:block}.rd dl{margin:0;padding:18px 24px;overflow:auto}.rd dt{font:700 11px "Segoe UI";letter-spacing:.12em;text-transform:uppercase;color:#5F5670;margin-top:12px}.rd dt:first-child{margin-top:0}.rd dd{margin:2px 0 0;font-size:14px;color:var(--ink)}
+.stp .cs{width:290px}.stp .cm{left:340px}.stp .nt{position:absolute;left:24px;bottom:50px;width:280px;font-size:12px;line-height:1.5;color:#5F5670}
+.stp ol{list-style:none;padding:0;margin:0 0 16px;max-width:820px}.stp li{padding:7px 0;border-bottom:1px solid var(--hair);font-size:14px}
+.stp .ex figure{margin:0;background:#fff;border:1px solid var(--hair)}.stp .ex{grid-template-columns:repeat(2,minmax(0,1fr))}.stp .ex img{display:block;width:100%;height:auto}.stp{display:contents}.stp .ex figcaption{background:var(--p);color:#fff;padding:7px 10px;font:600 13px "Segoe UI"}
 </style></head><body>
 <div class="bar"><b>Guia de Visualização</b><span style="color:var(--mut)" id="sub"></span>
  <div class="seg" role="group"><button id="vRep" aria-pressed="true">Relatório</button><button id="vBs" aria-pressed="false">Bastidores</button></div>
@@ -118,56 +127,62 @@ const T={
 pt:{title:'Qual <mark>gráfico</mark> usar?',sub:'Responda só ao que souber. Os gráficos que não servem saem da tela.',
  steps:['Objetivo','Variáveis','Análise temporal?','Categorias','Valores','Composição'],all:'Todos os objetivos',
  of:(n,t)=>`<strong>${n}</strong> de ${t} gráficos`,clear:'Limpar filtros',emptyT:'Nenhum gráfico para essa combinação.',emptyD:'Remova um filtro para ampliar o resultado.',
- lab:['Serve para','Cuidado','No Power BI','Muito usado em'],nav:['Guia','Crédito e cobrança','Sobre o autor'],
- cases:'Casos de uso',tipL:'Dica',cardsL:'Gráficos indicados',qsL:'Comece por aqui',qs:[['Evolução no tempo',5],['Ranking',3],['Parte do total',7],['Relação',2],['Distribuição',4],['Um número',11]],showL:'Mostrar',ess:['Essenciais','Todos'],showAll:'Mostrar todos os gráficos',refT:'Referências e inspirações',refs:[['Financial Times · Visual Vocabulary','Referência de como agrupar gráficos por objetivo.'],['Data to Viz','Referência de escolha por tipo de dado e de armadilhas por gráfico.'],['Guia em Power BI analisado','Ponto de partida da sequência de perguntas.']],orig:'Textos e ilustrações deste guia são originais de Lucas Delfino.',
+ lab:['Serve para','Cuidado','No Power BI','Muito usado em'],nav:['Guia','Storytelling','Crédito e cobrança','Sobre o autor'],stT:'Tópicos',stSteps:'Como aplicar',stEx:'Exemplos',stNote:'Inspirado nas lições do livro Storytelling with Data, de Cole Nussbaumer Knaflic. Textos e exemplos são originais.',close:'Fechar',port:'Portfólio ↗',
+ cases:'Casos de uso',tipL:'Dica',cardsL:'Gráficos indicados',qsL:'Comece por aqui',qs:[['Evolução no tempo',5],['Ranking',3],['Parte do total',7],['Relação',2],['Distribuição',4],['Um número',11]],showL:'Mostrar',ess:['Essenciais','Todos'],showAll:'Mostrar todos os gráficos',allv:'Tudo',refT:'Referências e inspirações',refs:[['Financial Times · Visual Vocabulary','Referência de como agrupar gráficos por objetivo.'],['Data to Viz','Referência de escolha por tipo de dado e de armadilhas por gráfico.'],['Guia em Power BI analisado','Ponto de partida da sequência de perguntas.']],orig:'Textos e ilustrações deste guia são originais de Lucas Delfino.',
  aboutT:'Sobre o autor',aboutSub:'Clareza antes de enfeite.',role:'Data & BI Analyst',
  facts:['10+ anos em operações de crédito','3+ anos em BI','Power BI · Python · SQL · Excel','Microsoft Certified: Power BI Data Analyst Associate (PL-300)'],
  credit:'Ao compartilhar este guia ou as ilustrações, mantenha o crédito a Lucas Delfino.',connect:'Conectar no LinkedIn ↗',
- tabs:['Descobrir','Discover','Crédito e cobrança','Credit & collections','Sobre · About'],note:'Dados e textos do projeto'},
+ tabs:['Descobrir','Discover','Storytelling','Storytelling (EN)','Crédito e cobrança','Credit & collections','Sobre · About'],note:'Dados e textos do projeto'},
 en:{title:'Which <mark>chart</mark> should I use?',sub:'Answer only what you know. Charts that do not fit leave the screen.',
  steps:['Goal','Variables','Time analysis?','Categories','Values','Composition'],all:'All goals',
  of:(n,t)=>`<strong>${n}</strong> of ${t} charts`,clear:'Clear filters',emptyT:'No chart for this combination.',emptyD:'Remove a filter to widen the result.',
- lab:['Use it for','Watch out','In Power BI','Often used in'],nav:['Guide','Credit & collections','About the author'],
- cases:'Use cases',tipL:'Tip',cardsL:'Suggested charts',qsL:'Start here',qs:[['Change over time',5],['Ranking',3],['Part of a whole',7],['Relationship',2],['Distribution',4],['Single number',11]],showL:'Show',ess:['Essentials','All'],showAll:'Show all charts',refT:'References and inspirations',refs:[['Financial Times · Visual Vocabulary','Reference for grouping charts by goal.'],['Data to Viz','Reference for choosing by data type and per-chart pitfalls.'],['Power BI guide reviewed','Starting point for the sequence of questions.']],orig:'Texts and illustrations in this guide are original works by Lucas Delfino.',
+ lab:['Use it for','Watch out','In Power BI','Often used in'],nav:['Guide','Storytelling','Credit & collections','About the author'],stT:'Topics',stSteps:'How to apply',stEx:'Examples',stNote:'Inspired by the lessons of Storytelling with Data by Cole Nussbaumer Knaflic. Texts and examples are original.',close:'Close',port:'Portfolio ↗',
+ cases:'Use cases',tipL:'Tip',cardsL:'Suggested charts',qsL:'Start here',qs:[['Change over time',5],['Ranking',3],['Part of a whole',7],['Relationship',2],['Distribution',4],['Single number',11]],showL:'Show',ess:['Essentials','All'],showAll:'Show all charts',allv:'All',refT:'References and inspirations',refs:[['Financial Times · Visual Vocabulary','Reference for grouping charts by goal.'],['Data to Viz','Reference for choosing by data type and per-chart pitfalls.'],['Power BI guide reviewed','Starting point for the sequence of questions.']],orig:'Texts and illustrations in this guide are original works by Lucas Delfino.',
  aboutT:'About the author',aboutSub:'Clarity before decoration.',role:'Data & BI Analyst',
  facts:['10+ years in credit operations','3+ years in BI','Power BI · Python · SQL · Excel','Microsoft Certified: Power BI Data Analyst Associate (PL-300)'],
  credit:'When sharing this guide or its illustrations, please credit Lucas Delfino.',connect:'Connect on LinkedIn ↗',
- tabs:['Descobrir','Discover','Crédito e cobrança','Credit & collections','Sobre · About'],note:'Project data and texts'}};
-const PAGES=['pt','en','cr_pt','cr_en','sobre'];
-const S={view:'rep',page:'pt',lang:'pt',ess:true,obj:'',v:new Set(),t:new Set(),c:new Set(),w:new Set(),p:new Set(),flip:new Set(),cs:0};
+ tabs:['Descobrir','Discover','Storytelling','Storytelling (EN)','Crédito e cobrança','Credit & collections','Sobre · About'],note:'Project data and texts'}};
+const PAGES=['pt','en','st_pt','st_en','cr_pt','cr_en','sobre'];
+const PORT='https://luudelfino91-lgtm.github.io/portfolio/';
+const isEn=p=>/(^|_)en$/.test(p),isPt=p=>/(^|_)pt$/.test(p);
+const S={view:'rep',page:'pt',lang:'pt',ess:true,rd:0,tp:0,obj:'',v:new Set(),t:new Set(),c:new Set(),w:new Set(),p:new Set(),flip:new Set(),cs:0};
 const K=['v','t','c','w','p'];
 const G=Object.fromEntries(D.charts.map(c=>[c.id,c])),BY=Object.fromEntries(D.charts.map(c=>[c.slug,c]));
 const esc=s=>String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const img=s=>'data:image/svg+xml;utf8,'+encodeURIComponent(D.svg[s]);
 const lang=()=>S.lang;
 const $=id=>document.getElementById(id);
-function reset(){S.ess=true;S.obj='';K.forEach(k=>S[k].clear());S.flip.clear()}
-function go(p){const nl=p==='en'||p==='cr_en'?'en':p==='pt'||p==='cr_pt'?'pt':S.lang;if(nl!==S.lang)reset();S.lang=nl;S.page=p;render()}
+function reset(){S.rd=0;S.ess=true;S.obj='';K.forEach(k=>S[k].clear());S.flip.clear()}
+function go(p){const nl=isEn(p)?'en':isPt(p)?'pt':S.lang;if(nl!==S.lang)reset();S.lang=nl;S.page=p;render()}
 function vis(){const m=new Set();for(const r of D.rows){if(S.ess&&!G[r.g].ess)continue;if(S.obj&&String(r.o)!==S.obj)continue;let ok=true;for(const k of K)if(S[k].size&&!S[k].has(r[k])){ok=false;break}if(ok)m.add(r.g)}return [...m].sort((a,b)=>a-b)}
 function card(g,L,t){const c=G[g],f=S.flip.has(g);
  if(!f)return `<button class="cd" data-g="${g}" aria-expanded="false" aria-label="${esc(c[L])}. ${esc(c['uso_'+L])}"><img src="${img(c.slug)}" alt=""><div class="ti">${esc(c[L])}</div></button>`;
  return `<button class="cd f" data-g="${g}" aria-expanded="true" aria-label="${esc(c[L])}"><div class="bk"><dl style="margin:0"><dt>${t.lab[0]}</dt><dd>${esc(c['uso_'+L])}</dd><dt>${t.lab[1]}</dt><dd>${esc(c['cuidado_'+L])}</dd><dt>${t.lab[2]}</dt><dd>${esc(c['pbi_'+L])}</dd><dt>${t.lab[3]}</dt><dd>${esc(c['usado_'+L])}</dd></dl></div><div class="ti">${esc(c[L])}</div></button>`}
-function header(L,t){const cur=S.page==='sobre'?2:S.page.startsWith('cr')?1:0;const tgt=[L==='pt'?'pt':'en',L==='pt'?'cr_pt':'cr_en','sobre'];
- return `<div class="hd"><div class="brand">Lucas Delfino<small>DATA & BI ANALYST</small></div>`+t.nav.map((n,i)=>`<button class="n" data-go="${tgt[i]}" ${i===cur?'aria-current="page"':''}>${n}</button>`).join('')+`<button class="n" data-li="1">LinkedIn ↗</button><div class="lang"><button data-setlang="pt" aria-pressed="${L==='pt'}">PT</button><button data-setlang="en" aria-pressed="${L==='en'}">EN</button></div><img class="me" src="${AVATAR}" alt="Lucas Delfino"></div>`}
+function header(L,t){const p=S.page,cur=p==='sobre'?3:p.startsWith('cr')?2:p.startsWith('st')?1:0;const tgt=[L,'st_'+L,'cr_'+L,'sobre'];
+ return `<div class="hd"><div class="brand">Lucas Delfino<small>DATA & BI ANALYST</small></div>`+t.nav.map((n,i)=>`<button class="n" data-go="${tgt[i]}" ${i===cur?'aria-current="page"':''}>${n}</button>`).join('')+`<button class="n" data-url="${PORT}">${t.port}</button><button class="n" data-url="${LI}">LinkedIn ↗</button><div class="lang"><button data-setlang="pt" aria-pressed="${L==='pt'}">PT</button><button data-setlang="en" aria-pressed="${L==='en'}">EN</button></div><img class="me" src="${AVATAR}" alt="Lucas Delfino"></div>`}
 function tabs(t){const i=PAGES.indexOf(S.page);return `<div class="pg">`+t.tabs.map((n,j)=>`<button data-go="${PAGES[j]}" ${j===i?'aria-current="page"':''}>${n}</button>`).join('')+`<span>${t.note}</span></div>`}
+function reader(L,t){const c=G[S.rd];return `<div class="rd" role="dialog" aria-label="${esc(c[L])}"><div class="rh">${esc(c[L])}<button data-close="1">${t.close}</button></div><div><img src="${img(c.slug)}" alt=""></div><dl><dt>${t.lab[0]}</dt><dd>${esc(c['uso_'+L])}</dd><dt>${t.lab[1]}</dt><dd>${esc(c['cuidado_'+L])}</dd><dt>${t.lab[2]}</dt><dd>${esc(c['pbi_'+L])}</dd><dt>${t.lab[3]}</dt><dd>${esc(c['usado_'+L])}</dd></dl></div>`}
 function pageGuide(L,t){const ids=vis();
- const opt=k=>Object.entries(D.labels[k]).map(([o,l])=>`<button data-k="${k}" data-v="${o}" aria-pressed="${S[k].has(+o)}">${esc(l[L])}</button>`).join('');
+ const opt=k=>`<select data-sel="${k}" aria-label="${t.steps[K.indexOf(k)+1]}"><option value="">${t.allv}</option>`+Object.entries(D.labels[k]).map(([o,l])=>`<option value="${o}"${S[k].has(+o)?' selected':''}>${esc(l[L])}</option>`).join('')+`</select>`;
  const sel=`<select id="obj" aria-label="${t.steps[0]}"><option value="">${t.all}</option>${D.objs.map(o=>`<option value="${o.id}"${S.obj==o.id?' selected':''}>${esc(o[L])}</option>`).join('')}</select>`;
- const body=[sel,...K.map(opt)].map((b,i)=>`<div><h2><i>0${i+1}</i>${t.steps[i]}</h2>${i?`<div class="o">${b}</div>`:b}</div>`).join('');
- const qs=`<div class="qs"><b>${t.qsL}</b>`+t.qs.map(([n,o])=>`<button data-qs="${o}" aria-pressed="${S.obj==o}">${n}</button>`).join('')+`<div class="sp"><b>${t.showL}</b><div class="tg"><button data-ess="1" aria-pressed="${S.ess}">${t.ess[0]}</button><button data-ess="0" aria-pressed="${!S.ess}">${t.ess[1]}</button></div></div></div>`;
- return `<div class="tt">${t.title}</div><div class="st">${t.sub}</div>${qs}<div class="ct"><span class="cnt">${t.of(ids.length,D.charts.length)}</span><button data-clear="1">${t.clear}</button></div><div class="sl">${body}</div><div class="gal">${ids.length?`<div class="g4">${ids.map(g=>card(g,L,t)).join('')}</div>`:`<div class="emp"><b>${t.emptyT}</b>${t.emptyD}${S.ess?`<br><button data-ess="0">${t.showAll}</button>`:''}</div>`}</div>`}
+ const body=[sel,...K.map(opt)].map((b,i)=>`<div><h2><i>0${i+1}</i>${t.steps[i]}</h2>${b}</div>`).join('');
+ const mo=`<div class="mo"><b>${t.showL}</b><div class="tg"><button data-ess="1" aria-pressed="${S.ess}">${t.ess[0]}</button><button data-ess="0" aria-pressed="${!S.ess}">${t.ess[1]}</button></div></div>`;
+ return `<div class="tt">${t.title}</div>${mo}<div class="ct"><span class="cnt">${t.of(ids.length,D.charts.length)}</span><button data-clear="1">${t.clear}</button></div><div class="sl">${body}</div><div class="gal">${ids.length?`<div class="g6">${ids.map(g=>card(g,L,t)).join('')}</div>`:`<div class="emp"><b>${t.emptyT}</b>${t.emptyD}${S.ess?`<br><button data-ess="0">${t.showAll}</button>`:''}</div>`}</div>${S.rd?reader(L,t):''}`}
+function pageStory(L,t){const tp=D.topics[S.tp];
+ return `<div class="stp"><div class="cs"><h2>${t.stT}</h2>`+D.topics.map((x,i)=>`<button data-tp="${i}" aria-pressed="${i===S.tp}">${esc(x['t_'+L])}</button>`).join('')+`</div><div class="nt">${t.stNote}</div><div class="cm"><h1 class="q">${esc(tp['t_'+L])}</h1><p class="tip">${esc(tp['i_'+L])}</p><div class="kc">${t.stSteps}</div><ol>${tp['s_'+L].map(s=>`<li>${esc(s)}</li>`).join('')}</ol><div class="kc">${t.stEx}</div><div class="g2 ex">${['antes','depois'].map((k,j)=>`<figure><img src="${D.stimg[tp.slug+'_'+k+'_'+L]}" alt="${esc(tp['c'+j+'_'+L])}"><figcaption>${esc(tp['c'+j+'_'+L])}</figcaption></figure>`).join('')}</div></div></div>`}
 function pageCases(L,t){const c=D.cases[S.cs];
- return `<div class="cs"><h2>${t.cases}</h2>`+D.cases.map((x,i)=>`<button data-cs="${i}" aria-pressed="${i===S.cs}">${esc(x['t_'+L])}</button>`).join('')+`</div><div class="cm"><h1 class="q">${esc(c['q_'+L])}</h1><p class="tip"><b>${t.tipL}:</b> ${esc(c['n_'+L])}</p><div class="kc">${t.cardsL}</div><div class="g3">${c.charts.map(s=>card(BY[s].id,L,t)).join('')}</div></div>`}
-function pageAbout(L,t){return `<div class="ab"><div class="l"><img src="${AVATAR}" alt="Lucas Delfino"><h1>Lucas Delfino</h1><p>${t.role}</p><a class="in" href="${LI}" target="_blank" rel="noopener">${t.connect}</a></div><div class="r"><h2>${t.aboutT}</h2><p class="sub">${t.aboutSub}</p><ul>${t.facts.map(f=>`<li>${f}</li>`).join('')}</ul><div class="cr">${t.credit}</div><div class="rf"><h3>${t.refT}</h3>${t.refs.map(r=>`<p><b>${r[0]}</b> — ${r[1]}</p>`).join('')}<p>${t.orig}</p></div></div></div>`}
+ return `<div class="cs"><h2>${t.cases}</h2>`+D.cases.map((x,i)=>`<button data-cs="${i}" aria-pressed="${i===S.cs}">${esc(x['t_'+L])}</button>`).join('')+`</div><div class="cm"><h1 class="q">${esc(c['q_'+L])}</h1><p class="tip"><b>${t.tipL}:</b> ${esc(c['n_'+L])}</p><div class="kc">${t.cardsL}</div><div class="g3">${c.charts.map(s=>card(BY[s].id,L,t)).join('')}</div></div>${S.rd?reader(L,t):''}`}
+function pageAbout(L,t){return `<div class="ab"><div class="l"><img src="${AVATAR}" alt="Lucas Delfino"><h1>Lucas Delfino</h1><p>${t.role}</p><a class="in" href="${LI}" target="_blank" rel="noopener">${t.connect}</a><br><a class="in" style="background:none;color:var(--ink);border:1px solid var(--ink);margin-top:10px" href="${PORT}" target="_blank" rel="noopener">${t.port}</a></div><div class="r"><h2>${t.aboutT}</h2><p class="sub">${t.aboutSub}</p><ul>${t.facts.map(f=>`<li>${f}</li>`).join('')}</ul><div class="cr">${t.credit}</div><div class="rf"><h3>${t.refT}</h3>${t.refs.map(r=>`<p><b>${r[0]}</b> — ${r[1]}</p>`).join('')}<p>${t.orig}</p></div></div></div>`}
 function bastidores(){
- const rows=[['Descobrir','PT','Essenciais/Demais, 6 slicers, contador, Limpar filtros, galeria Card Browser','Slicers sincronizados só dentro da página'],['Discover','EN','Mesmos visuais, campos em inglês','Estado do slicer reinicia ao trocar de idioma'],['Crédito e cobrança','PT','Slicer de caso, pergunta, dica, galeria','Medidas SELECTEDVALUE'],['Credit & collections','EN','Idem, campos em inglês',''],['Sobre · About','PT/EN','Foto, LinkedIn, crédito','Botão de link para o perfil']];
- const F=[['nat','Atalhos "Comece por aqui"','Prontos na simulação. No Power BI são bookmarks, a criar no Desktop (ainda não estão no .pbit)'],['ok','Essenciais ou demais','Slicer com Essenciais pré-selecionado (16 gráficos); selecionar também "Demais" libera os 59'],['ok','Filtrar por 6 perguntas opcionais','Em branco = qualquer valor'],['ok','Um cartão por gráfico','Sem repetição; colunas e barras pareadas viraram variação de colunas e barras'],['ok','Detalhes no verso do cartão','Serve para, cuidado, no Power BI, muito usado em'],['ok','Contador e Limpar filtros','Cartão com medida (DAX) e botão "Limpar todos os slicers"'],['ok','Português e inglês','Uma página por idioma'],['ok','Crédito e cobrança por caso','12 casos; pergunta e dica por medida SELECTEDVALUE (alinhadas ao centro no Power BI)'],['ok','Sobre o autor, LinkedIn e referências','Crédito de autoria e fontes de inspiração'],['nat','Cruzamento entre slicers e galeria','Relacionamento bidirecional entre Fato_Selecao e Dim_Grafico'],['nat','Texto alternativo e ordem do Tab','Configurados visual a visual no Power BI'],['web','Busca por pergunta','Power BI não tem caixa de busca livre nativa'],['web','Comparar dois gráficos','Exige interação que o Power BI não oferece'],['web','Link direto para cada gráfico','Só na versão web (GitHub Pages)'],['plan','Layout para celular','Galeria de 2 colunas (prévia abaixo)'],['plan','Pôster A3 em PDF, PT e EN','Gerado a partir das ilustrações'],['plan','Especificação Deneb por gráfico','Começa pelos 10 mais pedidos, com CSV de exemplo'],['plan','Fichas para LinkedIn e errado × certo','1080×1350, um conjunto por gráfico'],['plan','Espanhol e histórico de versões','Terceira página de idioma e CHANGELOG']];
+ const rows=[['Descobrir','PT','Título, Essenciais/Demais, 6 listas suspensas, contador, Limpar filtros, galeria Card Browser','Detalhes abrem no leitor do visual'],['Discover','EN','Mesmos visuais, campos em inglês','Estado dos filtros reinicia ao trocar de idioma'],['Storytelling','PT','Lista de 8 tópicos, ideia, passos em tabela, exemplos antes e depois','Medidas SELECTEDVALUE e Card Browser'],['Storytelling (EN)','EN','Idem, em inglês',''],['Crédito e cobrança','PT','Lista de 12 casos, pergunta, dica, galeria','Medidas SELECTEDVALUE'],['Credit & collections','EN','Idem, campos em inglês',''],['Sobre · About','PT/EN','Foto, LinkedIn, portfólio, referências','Botões de link para o perfil e o portfólio']];
+  const F=[['ok','Filtros em listas suspensas','Um clique abre a lista; em branco = qualquer valor'],['ok','Essenciais ou demais','Slicer com Essenciais pré-selecionado (16 gráficos); selecionar também "Demais" libera os 59'],['ok','Um cartão por gráfico, em tamanho compacto','Seis por linha; detalhes abrem no leitor do Card Browser'],['ok','Aba Storytelling','8 tópicos com ideia, três passos e exemplos antes/depois, em português e inglês'],['ok','Português e inglês','Uma página por idioma'],['ok','Crédito e cobrança por caso','12 casos; pergunta e dica por medida SELECTEDVALUE'],['ok','Contador e Limpar filtros','Cartão com medida (DAX) e ação "Limpar todos os slicers"'],['ok','Portfólio e LinkedIn','Links no cabeçalho e na página Sobre, sem borda (formas transparentes)'],['nat','Cruzamento entre slicers e galeria','Relacionamento bidirecional entre Fato_Selecao e Dim_Grafico'],['nat','Texto alternativo e ordem do Tab','Configurados visual a visual no Power BI'],['web','Busca por pergunta','Power BI não tem caixa de busca livre nativa'],['web','Comparar dois gráficos','Exige interação que o Power BI não oferece'],['web','Link direto para cada gráfico','Só na versão web (GitHub Pages)'],['plan','Atalhos "Comece por aqui"','Bookmarks a criar no Desktop'],['plan','Layout para celular','Galeria de 2 colunas (prévia abaixo)'],['plan','Pôster A3 em PDF, PT e EN','Gerado a partir das ilustrações'],['plan','Especificação Deneb por gráfico','Começa pelos 10 mais pedidos'],['plan','Fichas para LinkedIn e errado × certo','1080×1350, um conjunto por gráfico'],['plan','Espanhol e histórico de versões','Terceira página de idioma e CHANGELOG']];
  const tg={ok:['Pronto','t-ok'],nat:['Nativo no Power BI','t-nat'],web:['Só na versão web','t-web'],plan:['Planejado','t-plan']};
  const bx=(x,n,cols,sub)=>`<g><rect class="b" x="${x}" y="40" width="160" height="${36+cols.length*20}"/><rect class="hh" x="${x}" y="40" width="160" height="26"/><text class="hl" x="${x+10}" y="58">${n}</text>${cols.map((c,i)=>`<text x="${x+10}" y="${86+i*20}">${c}</text>`).join('')}<text class="m" x="${x}" y="${40+36+cols.length*20+16}">${sub}</text></g>`;
  const ar=(a,b,l)=>`<line x1="${a}" y1="100" x2="${b}" y2="100"/><text class="m" x="${(a+b)/2-10}" y="92">${l}</text>`;
+ const er2=`<svg viewBox="0 0 1000 150" role="img" aria-label="Modelo de dados do Storytelling">${bx(2,'Dim_Passo',['id_passo','id_topico','ordem','texto_pt / texto_en'],'24 linhas')}${bx(210,'Dim_Topico',['id_topico','titulo_pt / en','ideia_pt / en'],'8 tópicos')}${bx(418,'Dim_Exemplo',['id_exemplo','id_topico','legenda_pt / en','imagem_pt / en'],'16 exemplos')}${ar(162,210,'*:1')}${ar(370,418,'1:*')}</svg>`;
  const er=`<svg viewBox="0 0 1000 220" role="img" aria-label="Modelo de dados">${bx(2,'Dim_Objetivo',['id_objetivo','objetivo_pt','objetivo_en'],'dimensão')}${bx(210,'Fato_Selecao',['id_selecao','id_objetivo','id_grafico','vars · tempo · cat','valores · composição'],'fato (171 linhas)')}${bx(418,'Dim_Grafico',['id_grafico','nome_pt / nome_en','imagem_url','uso · cuidado','essencial · perfil'],'dimensão (59)')}${bx(626,'Ponte_Caso_Grafico',['id_caso','id_grafico','ordem'],'ponte')}${bx(838,'Dim_Caso',['id_caso','titulo_pt / en','pergunta','dica'],'dimensão (12)')}${ar(162,210,'1:*')}${ar(370,418,'*:1 ↔')}${ar(578,626,'1:*')}${ar(786,838,'*:1')}</svg>`;
- return `<div class="bs"><h2>Mapa de páginas</h2><p class="l">Cinco páginas, como as abas do relatório. A troca de idioma leva a outra página e limpa os filtros, igual ao Power BI.</p><table><tr><th>Página</th><th>Idioma</th><th>Visuais</th><th>Observação</th></tr>${rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</table>
- <h2>Modelo de dados</h2><p class="l">Cinco tabelas. A seta dupla indica filtro nos dois sentidos: ao filtrar a galeria pelos slicers, só os gráficos válidos aparecem.</p><div class="er">${er}</div>
+ return `<div class="bs"><h2>Mapa de páginas</h2><p class="l">Sete páginas, como as abas do relatório. A troca de idioma leva a outra página e limpa os filtros, igual ao Power BI.</p><table><tr><th>Página</th><th>Idioma</th><th>Visuais</th><th>Observação</th></tr>${rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</table>
+ <h2>Modelo de dados</h2><p class="l">Oito tabelas. A seta dupla indica filtro nos dois sentidos: ao filtrar a galeria pelos slicers, só os gráficos válidos aparecem.</p><div class="er">${er}${er2}</div>
  <h2>Funcionalidades</h2><p class="l">O que já está resolvido, o que é nativo do Power BI, o que só existe na versão web e o que vem depois.</p><table><tr><th>Funcionalidade</th><th>Detalhe</th><th>Situação</th></tr>${F.map(f=>`<tr><td>${f[1]}</td><td>${f[2]}</td><td><span class="tag ${tg[f[0]][1]}">${tg[f[0]][0]}</span></td></tr>`).join('')}</table>
  <h2>Acessibilidade: o que foi medido</h2><p class="l">Razões de contraste calculadas (mínimo de 4,5:1 para texto e 3:1 para elementos gráficos). O que não foi medido está marcado como a testar.</p>
  <table><tr><th>Item</th><th>Resultado</th><th>Situação</th></tr>
@@ -187,8 +202,8 @@ function fit(){const w=$('stage').clientWidth-32,s=Math.max(.62,Math.min(1,w/128
 function render(){
  const L=lang(),t=T[L];document.documentElement.lang=L==='pt'?'pt-BR':'en';document.title=L==='pt'?'Guia de Visualização':'Visualization Guide';
  $('sub').textContent=L==='pt'?'Simulação de como fica no Power BI':'Simulation of the Power BI report';
- const keepG=document.querySelector('.gal,.cm'),sc=keepG?keepG.scrollTop:0;
- let b=S.page==='sobre'?pageAbout(L,t):S.page.startsWith('cr')?pageCases(L,t):pageGuide(L,t);
+ const keepG=S.rd?null:document.querySelector('.gal,.cm'),sc=keepG?keepG.scrollTop:0;
+ let b=S.page==='sobre'?pageAbout(L,t):S.page.startsWith('cr')?pageCases(L,t):S.page.startsWith('st')?pageStory(L,t):pageGuide(L,t);
  $('cv').innerHTML=header(L,t)+b+tabs(t);
  const g=document.querySelector('.gal,.cm');if(g)g.scrollTop=sc;
  $('stage').hidden=S.view!=='rep';$('bsw').hidden=S.view!=='bs';
@@ -199,16 +214,18 @@ document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
  if(b.id==='vRep'){S.view='rep';render();return}if(b.id==='vBs'){S.view='bs';render();return}
  if(b.id==='th'){const d=document.documentElement;d.dataset.theme=(d.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))==='dark'?'light':'dark';return}
- if(b.dataset.setlang){const nl=b.dataset.setlang;if(nl!==S.lang){reset();S.lang=nl;if(S.page!=='sobre')S.page=(S.page.startsWith('cr')?'cr_':'')+nl}render();return}
- if(b.dataset.li){window.open(LI,'_blank','noopener');return}
+ if(b.dataset.setlang){const nl=b.dataset.setlang;if(nl!==S.lang){reset();S.lang=nl;if(S.page!=='sobre')S.page=(S.page.startsWith('cr')?'cr_':S.page.startsWith('st')?'st_':'')+nl}render();return}
+ if(b.dataset.url){window.open(b.dataset.url,'_blank','noopener');return}
+ if(b.dataset.close){S.rd=0;render();return}
+ if(b.dataset.tp!==undefined){S.tp=+b.dataset.tp;render();return}
  if(b.dataset.go){go(b.dataset.go);return}
  if(b.dataset.clear){reset();render();return}
  if(b.dataset.qs){const o=b.dataset.qs;K.forEach(k=>S[k].clear());S.flip.clear();S.obj=S.obj===o?'':o;render();return}
  if(b.dataset.ess!==undefined){S.ess=b.dataset.ess==='1';S.flip.clear();render();return}
  if(b.dataset.k){const k=b.dataset.k,v=+b.dataset.v;S[k].has(v)?S[k].delete(v):S[k].add(v);render();return}
  if(b.dataset.cs!==undefined){S.cs=+b.dataset.cs;S.flip.clear();render();return}
- if(b.dataset.g){const g=+b.dataset.g;S.flip.has(g)?S.flip.delete(g):S.flip.add(g);render()}
+ if(b.dataset.g){S.rd=+b.dataset.g;render()}
 });
-document.addEventListener('change',e=>{if(e.target.id==='obj'){S.obj=e.target.value;render()}});
+document.addEventListener('change',e=>{if(e.target.id==='obj'){S.obj=e.target.value;render()}if(e.target.dataset.sel){const k=e.target.dataset.sel;S[k].clear();if(e.target.value!=='')S[k].add(+e.target.value);render()}});
 addEventListener('resize',fit);render();
 </script></body></html>
