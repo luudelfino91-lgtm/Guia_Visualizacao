@@ -116,7 +116,7 @@ def card(name,measure,x,y,w,h,z,size,color,alt,bold=False,ent='Dim_Grafico'):
       'vcObjects':{**NOCHROME,**ALT(alt)}}},x,y,w,h,z)
 
 CB='CardBrowser8D7CFFDA2E7E400C9474F41B9EDBBA58'
-def cardbrowser(L,name,alt,x,y,w,h,cw=190,ch=165,rw=700,rh=380,ex=False):
+def cardbrowser(L,name,alt,x,y,w,h,cw=190,ch=225,rw=700,rh=260,ex=False):
     cols=[('id_grafico',None),(f'nome_{L}',None),('imagem_url',None)]
     if ex: return cardbrowser_ex(L,name,alt,x,y,w,h,cw,ch,rw,rh)
     meta=[(f'uso_{L}',{'pt':'Serve para','en':'Use it for'}[L]),(f'cuidado_{L}',{'pt':'Cuidado','en':'Watch out'}[L]),
@@ -205,7 +205,7 @@ def guia(L):
     vcs.append(slicer(hx(f'mo{L}'),'Dim_Grafico',f'grupo_{L}',{'pt':'Mostrar','en':'Show'}[L],552,62,288,34,1100,'Basic',{'pt':'Mostrar essenciais ou demais gráficos','en':'Show essential or more charts'}[L],default={'pt':'Essenciais','en':'Essentials'}[L]))
     for i,(ent,prop) in enumerate(specs):
         vcs.append(slicer(hx(f'sl{L}{i}'),ent,prop,T[i],COLS[i],122,COLW[i],32,1000+i,'Dropdown',T[i]))
-    vcs.append(cardbrowser(L,hx(f'cb{L}'),{'pt':'Galeria de gráficos filtrada','en':'Filtered chart gallery'}[L],24,168,1232,516,190,165,700,380))
+    vcs.append(cardbrowser(L,hx(f'cb{L}'),{'pt':'Galeria de gráficos filtrada','en':'Filtered chart gallery'}[L],24,168,1232,516,190,225,700,260))
     return vcs
 def storytelling(L):
     key='st_'+L; first={'pt':'Entenda o contexto','en':'Understand the context'}[L]
@@ -222,7 +222,7 @@ def credito(L):
     vcs.append(slicer(hx(f'cs{L}'),'Dim_Caso',f'titulo_{L}',{'pt':'Caso de uso','en':'Use case'}[L],24,98,290,580,1000,'Basic',{'pt':'Casos de uso de crédito e cobrança','en':'Credit and collections use cases'}[L],horizontal=False,single=True,default=first))
     vcs.append(card(hx(f'q{L}'),'Texto_Pergunta_'+L.upper(),356,66,900,92,100,24,'#211A2B',{'pt':'Pergunta do caso','en':'Case question'}[L],True,'Dim_Caso'))
     vcs.append(card(hx(f'd{L}'),'Texto_Dica_'+L.upper(),356,160,900,36,101,14,'#4A4158',{'pt':'Dica de leitura','en':'Reading tip'}[L],False,'Dim_Caso'))
-    vcs.append(cardbrowser(L,hx(f'cbc{L}'),{'pt':'Gráficos indicados para o caso','en':'Charts suggested for the case'}[L],340,230,916,446,230,200,700,380))
+    vcs.append(cardbrowser(L,hx(f'cbc{L}'),{'pt':'Gráficos indicados para o caso','en':'Charts suggested for the case'}[L],340,230,916,446,230,275,700,260))
     return vcs
 def sobre():
     vcs=chrome('sobre','pt')

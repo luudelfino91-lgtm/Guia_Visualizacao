@@ -32,3 +32,10 @@ Textos e ilustrações originais de **Lucas Delfino**, sob **CC BY 4.0** (veja `
 A aba **Storytelling** traz 8 tópicos com explicação curta, passos e exemplos antes/depois, todos originais, inspirados nas lições do livro *Storytelling with Data* (Cole Nussbaumer Knaflic). Portfólio: https://luudelfino91-lgtm.github.io/portfolio/
 
 The **Storytelling** tab has 8 topics with a short explanation, steps and original before/after examples, inspired by the lessons of *Storytelling with Data* (Cole Nussbaumer Knaflic).
+
+## Notas da versão atual / Current version notes
+- `dist/Guia_Visualizacao_Lucas_Delfino.pbit` foi exportado do Power BI Desktop depois de testar as 7 páginas (formato de projeto novo, PBIR). / Exported from Power BI Desktop after testing all 7 pages.
+- "Limpar filtros" / "Clear filters" usa um favorito (estado padrão com Essenciais), pois "limpar todos os segmentadores" apagava o padrão. No Desktop, botões executam com Ctrl+clique. / The clear button uses a bookmark with the default state; in Desktop, buttons run with Ctrl+click.
+- Cartões da galeria: 190 x 225 (Descobrir/Discover) e 230 x 275 (casos), para o título aparecer abaixo da imagem. Leitor: altura 260, fonte 11. / Gallery cards sized so the title shows under the image.
+- `fonte/build_pbit3.py` gera o modelo no formato antigo (`Report/Layout`) e não inclui os favoritos; o `.pbit` em `dist/` é a versão de referência. / The build script produces the older layout format without bookmarks; the `.pbit` in `dist/` is the reference version.
+- Ainda aberto: o leitor de detalhes mostra 4 das 5 linhas (rolar para ver "Perfil"). / Still open: the reader shows 4 of 5 rows.
