@@ -28,7 +28,7 @@ for it in zi.infolist():
             d['position']['y']=116; d['position']['height']=44; ch=True; n['sl']+=1
         elif v['visualType'].startswith('CardBrowser') and 'Dim_Grafico.imagem_' in json.dumps(v['query']):
             p=v['objects']['presentation'][0]['properties']
-            cr='Credit' in it.filename; p['cardWidth']=L('290D' if cr else '230D'); p['cardHeight']=L('270D' if cr else '215D'); ch=True; n['cb']+=1
+            cr='Credit' in it.filename; p['cardWidth']=L('250D' if cr else '200D'); p['cardHeight']=L('235D' if cr else '172D'); ch=True; n['cb']+=1
         if ch: data=json.dumps(d,ensure_ascii=False,indent=2).encode('utf-8')
     zo.writestr(it,data)
 if TR not in zi.namelist() and 'Report/StaticResources/RegisteredResources/'+TR not in zi.namelist():
