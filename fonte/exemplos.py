@@ -82,18 +82,32 @@ def ex(L):
     for i,(nm,v) in enumerate(zip(s['ch'],CH)):
         y=110+i*48; b+=T(150,y+22,nm,15,INK,600 if i==0 else 400,'end')+Rc(166,y,(v/24)*540,32,LM if i==0 else LA,3,INK if i==0 else 'none',2)+T(166+(v/24)*540+10,y+22,f'{v}%',14,INK,600)
     out['escolher_depois']=b
-    # 3 ruido
-    out['ruido_antes']=cols(VEN,100,110,730,400,[V]*12,grid=True,ticks=True,box=True,labels='all',mes=M,lblsz=10)+Rc(600,64,12,12,V,0)+T(618,75,s['sales'],12,INK)
-    out['ruido_depois']=cols(VEN,90,130,740,400,LA,lab_idx=[5],mes=M)
-    out['ruido_depois']=out['ruido_depois'].replace(LA,LA)
-    # 4 olhar
-    out['olhar_antes']=cols(VEN,90,110,740,400,V,mes=M)+T(90,86,s['sales'],16,INK,700)
-    colr=[LA]*12; colr[5]=LM
-    out['olhar_depois']=cols(VEN,90,130,740,400,colr,lab_idx=[5],mes=M)+T(388,112,s['peak'],14,INK,700,'middle')
-    # 5 designer
-    ch5=cols(VEN[:8],360,260,700,400,V,mes=M[:8])
-    out['designer_antes']=T(400,100,s['h5s'],12,MUT,400,'middle')+T(60,150,s['h5a'],30,INK,700,fam='Brico')+f'<g transform="translate(40,60)">{cols(VEN[:8],300,200,600,360,V,mes=M[:8])}</g>'+T(120,440,s['note5'],18,V,600)+T(560,250,s['sales'],22,LI,700)
-    out['designer_depois']=T(70,100,s['h5a'],30,INK,800,fam='Brico')+T(70,126,s['h5s'],14,MUT)+cols(VEN,70,170,730,400,LA,mes=M,lab_idx=[5])+Ci(0,0,0,'none')+T(70,452,s['note5'],12,MUT)
+    # 3 ruido (dispersão)
+    TX={'pt':dict(x='Investimento em mídia (mil)',y='Vendas (mil)',lab='Série 1',note='Quem investe mais vende mais'),'en':dict(x='Media spend (k)',y='Sales (k)',lab='Series 1',note='More spend, more sales')}[L]
+    SC=[(10,14),(14,20),(18,19),(22,28),(26,30),(30,41),(34,36),(38,47),(42,52),(46,50),(50,61),(54,66),(58,63),(62,72),(66,80),(70,78)]
+    px=lambda v,x0,x1:x0+(x1-x0)*v/80; py=lambda v,y0,y1:y1-(y1-y0)*v/90
+    g=''.join(Ln(100,py(t,120,400),730,py(t,120,400),'#6A6277',1.2)+T(90,py(t,120,400)+4,str(t),11,MUT,400,'end') for t in range(0,91,15))
+    g+=''.join(Ln(px(t,100,730),120,px(t,100,730),400,'#6A6277',1.2)+T(px(t,100,730),418,str(t),11,MUT,400,'middle') for t in range(0,81,10))
+    out['ruido_antes']=Rc(70,104,680,330,'none',0,'#6A6277',2)+g+''.join(Ci(px(x,100,730),py(y,120,400),8,V) for x,y in SC)+Rc(600,64,12,12,V,0)+T(618,75,TX['lab'],12,INK)+T(400,452,TX['x'],12,INK,400,'middle')
+    out['ruido_depois']=Ln(100,400,730,400,'#6A6277',1.5)+''.join(Ci(px(x,100,730),py(y,130,400),6,LM if i>=12 else LA) for i,(x,y) in enumerate(SC))+T(100,118,TX['y'],12,MUT)+T(400,436,TX['x'],12,MUT,400,'middle')+T(110,160,TX['note'],16,INK,800,fam='Brico')
+    # 4 olhar (colunas por faixa)
+    FX={'pt':(['Em dia','1-30','31-60','61-90','91-180','+180'],'Carteira por faixa de atraso (%)','Maior bloco do atraso: de 1 a 30 dias'),'en':(['Current','1-30','31-60','61-90','91-180','180+'],'Portfolio by delay bucket (%)','Largest delinquent block: 1 to 30 days')}[L]
+    BV=[40,22,15,11,7,5]
+    out['olhar_antes']=cols(BV,90,110,740,400,V,top=50,mes=FX[0])+T(90,86,FX[1],16,INK,700)
+    colr=[LA]*6; colr[1]=LM
+    out['olhar_depois']=cols(BV,90,140,740,400,colr,top=50,lab_idx=[1],mes=FX[0])+T(90,100,FX[2],17,INK,800,fam='Brico')
+    # 5 designer (cartões de indicadores)
+    KP={'pt':[('Recuperação','78%'),('Acordos','1.240'),('Ticket médio','R$ 860')],'en':[('Recovery','78%'),('Agreements','1,240'),('Average ticket','$ 860')]}[L]
+    bad=''
+    for i,(n,v) in enumerate(KP):
+        x=40+i*245; cc=[CO,V,LI][i]
+        bad+=Rc(x,120,220,200,'#fff',14,cc,4)+T(x+110,170,n,[22,14,18][i],cc,[700,400,600][i],'middle')+T(x+110,250,v,[56,40,48][i],[INK,CO,V][i],800,'middle',fam='Brico')+Rc(x+20,290,180,10,[LM,LA,CO][i],6)
+    out['designer_antes']=bad+T(400,420,'* '+KP[0][0]+' / '+KP[1][0]+' / '+KP[2][0],11,'#8C8199',400,'middle')
+    dep=''
+    for i,(n,v) in enumerate(KP):
+        x=50+i*240
+        dep+=T(x,150,n.upper(),12,MUT,700)+T(x,222,v,52,INK,800,fam='Brico')+Ln(x,246,x+190,246,V if i==0 else GRY,3 if i==0 else 1)
+    out['designer_depois']=dep+Ln(60,330,740,330,GRY,1)+T(60,364,{'pt':'Meta do mês: 80%. Faltam 2 pontos.','en':'Monthly target: 80%. 2 points to go.'}[L],16,INK,600)
     # 6 historia
     mini=lambda x,y,w,h,kind:''
     ant=cols([6,9,5,8],50,120,220,230,V)+Pl([(300+i*40,230-v*5) for i,v in enumerate([6,9,5,8,7])],LI,3)+''.join(Ci(560,170,60,V) for _ in [0])+cols([8,6,4,3],470,300,730,400,LA)+cols([5,8,6],50,300,220,400,V)+cols([4,7,5,9],300,320,430,400,LI)
