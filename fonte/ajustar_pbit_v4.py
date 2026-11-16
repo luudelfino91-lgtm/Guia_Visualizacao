@@ -18,7 +18,9 @@ for it in zi.infolist():
             if p['name']=='RegisteredResources' and not any(i['name']==TR for i in p['items']): p['items'].append({'name':TR,'path':TR,'type':'Image'})
         data=json.dumps(r,ensure_ascii=False,indent=2).encode('utf-8')
     elif it.filename.endswith('visual.json') and '/visuals/' in it.filename:
-        d=json.loads(data.decode('utf-8')); v=d['visual']; ch=False
+        raw=data.decode('utf-8')
+        if 'Segoe UI Semibold' in raw: data=raw.replace('Segoe UI Semibold','Segoe UI').encode('utf-8'); n['bold']=n.get('bold',0)+1
+        d=json.loads(data.decode('utf-8')); v=d['visual']; ch=data!=raw.encode('utf-8')
         if v['visualType']=='shape':
             v['visualType']='image'
             v['objects']={'general':[{'properties':{'imageUrl':{'expr':{'ResourcePackageItem':{'PackageName':'RegisteredResources','PackageType':1,'ItemName':TR}}}}}],
