@@ -10,6 +10,7 @@ CSS='''@font-face{font-family:Brico;font-weight:800;src:url(data:font/woff2;base
 *{margin:0;padding:0}body{width:800px;height:500px;background:#fff;overflow:hidden}svg{display:block}'''%(B64(F+'/bricolage-grotesque/files/bricolage-grotesque-latin-800-normal.woff2'),B64(F+'/inter/files/inter-latin-400-normal.woff2'),B64(F+'/inter/files/inter-latin-600-normal.woff2'),B64(F+'/inter/files/inter-latin-700-normal.woff2'))
 INK,V,LI,LA,LM,CO,GRY,SOFT,MUT='#211A2B','#7139B8','#B66BEA','#E7C5FF','#D7F34A','#FF665D','#DDD6E6','#F4ECFC','#5F5670'
 def T(x,y,s,size=14,fill=INK,w=400,anchor='start',fam='Inter'):
+    size=size*1.45 if size<=18 else size*1.12
     return f'<text x="{x}" y="{y}" font-family="{fam},sans-serif" font-size="{size}" font-weight="{w}" fill="{fill}" text-anchor="{anchor}">{s}</text>'
 def Rc(x,y,w,h,fill,rx=3,stroke='none',sw=0): return f'<rect x="{x:.1f}" y="{y:.1f}" width="{max(w,0):.1f}" height="{max(h,0):.1f}" rx="{rx}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
 def Ln(x1,y1,x2,y2,c=GRY,w=1,dash=None): return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{c}" stroke-width="{w}"'+(f' stroke-dasharray="{dash}"' if dash else '')+'/>'
@@ -44,11 +45,11 @@ def wrap(inner,kind,L):
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500"><rect width="800" height="500" fill="#fff"/>{tag(kind,L)}{inner}'+T(28,482,note,11,MUT)+T(772,482,'Lucas Delfino',11,'#8C8199',600,'end')+'</svg>'
 S={'pt':dict(sales='Vendas',ctx_q='QUEM',ctx_qv='Diretoria comercial',ctx_d='DECISÃO',ctx_dv='Manter ou cortar o canal Parceiros?',ctx_i='IDEIA PRINCIPAL',ctx_iv='Parceiros vendem menos a cada trimestre.',
   ch=['Loja','Site','App','Rep.','Atacado','Parceiros','Outros'],peak='Junho: pico de 64',title7='Vendas caíram 19% depois de junho',sub7='Vendas mensais, em milhares de unidades',t_months='Vendas por mês',
-  step=['Contexto','Virada','Ação'],stepv=['Vendas crescem até junho','Caem 19% depois','Reforçar o canal Parceiros'],h5a='Resultado do ano',h5s='Vendas mensais',note5='Fonte: sistema comercial',
+  step=['Contexto','Virada','Ação'],stepv=['Vendas sobem até junho','Caem 19% depois','Reforçar Parceiros'],h5a='Resultado do ano',h5s='Vendas mensais',note5='Fonte: sistema comercial',
   series=['Loja','Site','App'],leg='Legenda'),
  'en':dict(sales='Sales',ctx_q='WHO',ctx_qv='Sales leadership',ctx_d='DECISION',ctx_dv='Keep or cut the Partners channel?',ctx_i='BIG IDEA',ctx_iv='Partners sell less every quarter.',
   ch=['Store','Web','App','Reps','Wholesale','Partners','Other'],peak='June: peak of 64',title7='Sales fell 19% after June',sub7='Monthly sales, in thousands of units',t_months='Sales by month',
-  step=['Context','Turn','Action'],stepv=['Sales grow until June','Fall 19% after','Reinforce the Partners channel'],h5a='Year results',h5s='Monthly sales',note5='Source: sales system',
+  step=['Context','Turn','Action'],stepv=['Sales rise until June','Fall 19% after','Reinforce Partners'],h5a='Year results',h5s='Monthly sales',note5='Source: sales system',
   series=['Store','Web','App'],leg='Legend')}
 CH=[24,19,16,14,11,9,7]
 def ex(L):
@@ -58,7 +59,7 @@ def ex(L):
     ch=[24,19,16,14,11,6,5]
     pan=''.join(Ln(40,y+12,300,y+12,GRY,1)+T(40,y,s[k],11,V,700)+T(40,y+32,s[k+'v'][:34] if len(s[k+'v'])<=34 else s[k+'v'][:34],14,INK,600) for k,y in [('ctx_q',110),('ctx_d',190),('ctx_i',290)] for _ in [0])
     # wrap long text manually
-    def para(x,y,txt,size=14,w=24):
+    def para(x,y,txt,size=14,w=19):
         words=txt.split(); lines=[]; cur=''
         for wd in words:
             if len(cur+' '+wd)>w: lines.append(cur); cur=wd
@@ -69,8 +70,8 @@ def ex(L):
     right=''.join(T(0,0,'',1) for _ in [0])
     bx=''
     for i,(nm,v) in enumerate(zip(s['ch'],ch)):
-        y=120+i*42; bx+=T(388,y+17,nm,13,INK,600 if i==5 else 400,'end')+Rc(400,y,(v/24)*320,26,LM if i==5 else LA,3,INK if i==5 else 'none',2)+T(400+(v/24)*320+8,y+18,str(v),12,INK,600)
-    out['contexto_depois']=left+Ln(330,110,330,410,GRY,1)+bx
+        y=120+i*42; bx+=T(450,y+17,nm,13,INK,600 if i==5 else 400,'end')+Rc(462,y,(v/24)*250,26,LM if i==5 else LA,3,INK if i==5 else 'none',2)+T(462+(v/24)*250+8,y+18,str(v),12,INK,600)
+    out['contexto_depois']=left+Ln(340,110,340,410,GRY,1)+bx
     # 2 escolher
     ang=-math.pi/2; pie=''; pal=[V,LI,LA,'#9C8AB0',LM,CO,'#4B2A80']
     for i,v in enumerate(CH):
@@ -115,7 +116,7 @@ def ex(L):
     dep=''
     for i in range(3):
         x=40+i*250
-        dep+=T(x,128,str(i+1),44,LM if False else V,800,fam='Brico')+T(x+40,120,s['step'][i].upper(),12,V,700)+T(x+40,142,s['stepv'][i][:26],14,INK,600)
+        dep+=T(x,128,str(i+1),44,LM if False else V,800,fam='Brico')+T(x+40,120,s['step'][i].upper(),12,V,700)+T(x+40,142,s['stepv'][i],10,INK,600)
         if i<2:
             vv=VEN; pts,pl=line(vv,x,200,x+210,340,LA,3,70,40); dep+=pl
             if i==0: _,p2=line(vv[:6],x,200,x+210*5/11,340,V,5,70,40); dep+=p2+Ci(*pts[5],7,LM)
@@ -137,7 +138,7 @@ def ex(L):
     for k,vv in enumerate(ser):
         pts,pl=line(vv,90,120,660,370,colsr[k],4 if k==1 else 3,70,0); ant+=pl; dep+=pl
         dep+=T(pts[-1][0]+10,pts[-1][1]+5,s['series'][k],14,colsr[k] if k!=0 else '#8E4BC4',700)
-    ant+=''.join(Rc(250+i*110,430,14,14,colsr[i],2)+T(270+i*110,442,s['series'][i],13,INK) for i in range(3))+T(180,442,s['leg'],12,MUT)
+    ant+=''.join(Rc(250+i*110,430,14,14,colsr[i],2)+T(270+i*110,442,s['series'][i],13,INK) for i in range(3))+T(90,442,s['leg'],12,MUT)
     base=Ln(90,370,660,370,'#6A6277',1.5)
     out['rotulos_antes']=base+ant+''.join(Ln(90,370-(250)*t/70,740,370-(250)*t/70,GRY,1) for t in (20,40,60))
     out['rotulos_depois']=base+dep
