@@ -17,6 +17,7 @@ for s in slugs:
       cuidado_pt=c_pt,cuidado_en=c_en,pbi_pt=f'{kpt} · {p_pt}',pbi_en=f'{ken} · {p_en}',
       usado_pt=d_pt,usado_en=d_en,perfil_pt=C.PERFIL[perf][0],perfil_en=C.PERFIL[perf][1],
       essencial='sim' if s in C.ESSENCIAL else 'não',grupo_pt='Essenciais' if s in C.ESSENCIAL else 'Demais gráficos',grupo_en='Essentials' if s in C.ESSENCIAL else 'More charts',grupo_ord=1 if s in C.ESSENCIAL else 2,imagem_url=f'{BASE}/imagens/graficos/{s}.png'))
+for r in rows: r['imagem_pt']=f"{BASE}/imagens/rotulados/{r['slug']}_pt.png"; r['imagem_en']=f"{BASE}/imagens/rotulados/{r['slug']}_en.png"
 pd.DataFrame(rows).to_csv('repo/dados/dim_grafico.csv',index=False,encoding='utf-8')
 
 # Dim_Objetivo
